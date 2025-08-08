@@ -1,5 +1,7 @@
 Django>=4.2,<5.0
 djangorestframework
+django-webpack-loader
+django-cors-headers
 python-dotenv
 Pillow
 gunicorn
