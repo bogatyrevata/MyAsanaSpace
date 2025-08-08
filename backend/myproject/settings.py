@@ -1,3 +1,5 @@
+import os
+
 """
 Django settings for myproject project.
 
@@ -121,3 +123,24 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#ДОПОЛНИТЕЛЬНЫЕ НАСТРОЙКИ
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # backend/static/
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # для prod-сборки
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '..', 'frontend', 'build', 'static'), # frontend/build/static
+]
+
+TEMPLATES[0]['DIRS'] = [os.path.join(BASE_DIR, '..', 'frontend', 'build')]
+
+# CORS
+INSTALLED_APPS += ['corsheaders']
+MIDDLEWARE.insert(0, 'corsheaders.middleware.CorsMiddleware')
+
+CORS_ALLOW_ALL_ORIGINS = True  # или настрой конкретные
