@@ -2,6 +2,9 @@ Django>=4.2,<5.0
 djangorestframework
 django-webpack-loader
 django-cors-headers
+django-environ>=0.11.2 
+django-filter>=24.2           
 python-dotenv
 Pillow
 gunicorn
+psycopg2-binary>=2.9
