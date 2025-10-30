@@ -14,7 +14,15 @@
 ```bash
 git clone https://github.com/твое_имя/MyAsanaSpace.git
 cd MyAsanaSpace
-python -m venv .venv
-source .venv/bin/activate  # или .venv\Scripts\activate на Windows
+
+backend:
+cd backend/
+python3 -m venv .venv
+source .venv/bin/activate 
 pip install -r requirements.txt
-python manage.py runserver
+python3 manage.py runserver
+
+frontend:
+cd frontend/
+npm install
+npm run start 
