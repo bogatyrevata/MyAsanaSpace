@@ -5,10 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import WelcomeSection from './components/WelcomeSection';
 import Layout from "./components/Layout";
 import PoseGallery from "./components/PoseGallery";
-import HomePage from "./components/HomePage";
-import AsanasPage from "./components/AsanasPage";
-import MeditationPage from "./components/MeditationPage";
-import ContactsPage from "./components/ContactsPage";
+import HomePage from "./components/pages/HomePage";
+import AsanasPage from "./components/pages/AsanasPage";
+import MeditationPage from "./components/pages/MeditationPage";
+import ContactsPage from "./components/pages/ContactsPage";
 
 import "./App.css";
 
